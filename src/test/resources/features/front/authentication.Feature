@@ -1,5 +1,5 @@
 Feature: Authentication
-@Test1
+
   Scenario Outline:  Authentication Successful
     Given The user opens the page
     When The user logs in with the following credentials: <userName> and <password>
@@ -9,7 +9,6 @@ Feature: Authentication
       | userName | password | name       |
       | fernando | perez    | Jack Gomez |
 
- @Test2
   Scenario Outline:  Authentication Unsuccessful Bad Credentials
     Given The user opens the page
     When The user logs in with the following invalid credentials: <userName> and <password>

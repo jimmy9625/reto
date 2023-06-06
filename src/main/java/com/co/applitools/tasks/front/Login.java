@@ -10,12 +10,11 @@ import static com.co.applitools.userinterfaces.LoginPage.*;
 public class Login implements Task {
 
     private String userName;
-    private  String password;
+    private String password;
 
-    private  Login (String userName ,String password)
-    {
-        this.password=password;
-        this.userName=userName;
+    private Login(String userName, String password) {
+        this.password = password;
+        this.userName = userName;
     }
 
 
@@ -29,8 +28,7 @@ public class Login implements Task {
 
     }
 
-    public  static  Login followingCredentials(String userName,String password)
-    {
-        return  new Login(userName, password);
+    public static Login followingCredentials(String userName, String password) {
+        return new Login(userName, password);
     }
 }

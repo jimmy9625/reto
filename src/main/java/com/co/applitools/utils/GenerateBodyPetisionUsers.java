@@ -4,8 +4,7 @@ import org.json.JSONObject;
 
 public class GenerateBodyPetisionUsers {
 
-    public static String WhitData(String name , String job)
-    {
+    public static String WhitData(String name, String job) {
         JSONObject body = new JSONObject();
 
         body.put("name", name);

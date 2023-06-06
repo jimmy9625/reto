@@ -22,15 +22,11 @@ public class TheColorDisplayed implements Question<Boolean> {
 
             if (element.getText().contains("+")) {
                 if (!element.getCssValue("color").equals(GREEN_COLOR)) {
-                    System.out.println("en este verde");
-
                     return false;
                 }
             } else {
 
                 if (!element.getCssValue("color").equals(RED_COLOR)) {
-                    System.out.println("en este");
-                    System.out.println(element.getCssValue("color"));
                     return false;
                 }
             }

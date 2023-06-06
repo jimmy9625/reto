@@ -13,32 +13,27 @@ import static org.hamcrest.Matchers.equalTo;
 public class DashboardStepsDefinitions {
 
 
-
-
     @Then("^the total balance should be equal to: (.*)$")
     public void theTotalBalanceShouldBeEqualTo(String balance) {
 
-        theActorInTheSpotlight().should(GivenWhenThen.
-                seeThat(GetTotalBance.fromDashboard(), equalTo(balance)));
+        theActorInTheSpotlight().should(GivenWhenThen.seeThat(GetTotalBance.fromDashboard(), equalTo(balance)));
     }
 
     @Then("^the credit available should be equal to: (.*)$")
     public void theCreditAvailableShouldBeEqualTo(String creditAvailable) {
         System.out.println("entre aca  credit ");
-        theActorInTheSpotlight().should(GivenWhenThen.
-                seeThat(GetTotalCreditAvailable.fromDashboard(), equalTo(creditAvailable)));
+        theActorInTheSpotlight().should(GivenWhenThen.seeThat(GetTotalCreditAvailable.fromDashboard(), equalTo(creditAvailable)));
 
     }
 
     @Then("^the total transactions should be equal to: (.*)$")
     public void theTotalTransactionsShouldBeEqualTo(Integer transactions) {
-        theActorInTheSpotlight().should(GivenWhenThen.
-                seeThat(GetTotalTransactions.fromDashboard(), equalTo(transactions)));
+        theActorInTheSpotlight().should(GivenWhenThen.seeThat(GetTotalTransactions.fromDashboard(), equalTo(transactions)));
 
     }
 
     @Then("the colors should be displayed correctly")
-    public void theColorsShouldBeDisplayedCorrectly()  {
+    public void theColorsShouldBeDisplayedCorrectly() {
         theActorInTheSpotlight().should(GivenWhenThen.seeThat(TheColorDisplayed.fromToDashboard(), equalTo(true)));
     }
 

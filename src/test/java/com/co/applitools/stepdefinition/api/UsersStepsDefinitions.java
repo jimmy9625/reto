@@ -2,8 +2,8 @@ package com.co.applitools.stepdefinition.api;
 
 import com.co.applitools.questions.api.JobResponse;
 import com.co.applitools.questions.api.ResponseCode;
+import com.co.applitools.tasks.api.CreateUser;
 import com.co.applitools.tasks.api.GetUser;
-import com.co.applitools.tasks.api.SearchUser;
 import com.co.applitools.utils.Constants;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -32,9 +32,9 @@ public class UsersStepsDefinitions {
 
     }
 
-    @When("^the user sends a POST request to (.*)  with (.*) and (.*)$")
-    public void theUserSendsAPOSTRequestToUsersWithAnd(String path, String name, String job) {
-        theActorInTheSpotlight().attemptsTo(SearchUser.whitInfo(path, name, job));
+    @When("^the user sends a POST request to /users with (.*) and (.*)$")
+    public void theUserSendsAPOSTRequestToUsersWithAnd(String name, String job) {
+        theActorInTheSpotlight().attemptsTo(CreateUser.whitInfo(name, job));
 
     }
 
